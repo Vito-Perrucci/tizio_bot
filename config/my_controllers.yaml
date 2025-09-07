@@ -1,0 +1,64 @@
+controller_manager: 
+  ros__parameters:
+    update_rate: 30         # (Hz)
+    use_sim_time: true      # if true use the simulation time and not the real one
+
+    diff_cont:              
+      type: diff_drive_controller/DiffDriveController  # type of the controller (differential)
+
+    joint_broad:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+diff_cont:              
+  ros__parameters:
+
+    publish_rate: 50.0       # (Hz)
+    base_frame_id: base_link  # reference frame
+
+    left_wheel_names: ['left_wheel_joint']   # joint left wheel to control
+    right_wheel_names: ['right_wheel_joint'] # joint right wheel to control
+    wheel_separation: 0.35                  
+    wheel_radius: 0.05                        
+
+    use_stamped_vel: false                     # if true it add timestamp to velocity commands
+
+    # altre possibilità
+
+    # open_loop: false                          # se true ignora la retroazione dei giunti
+    # wheels_per_side: x                         # numero di ruote per lato, opzionale
+    # wheel_separation_multiplier: x            # moltiplicatore distanza ruote, opzionale
+    # left_wheel_radius_multiplier: x           # moltiplicatore raggio ruota sinistra, opzionale
+    # right_wheel_radius_multiplier: x          # moltiplicatore raggio ruota destra, opzionale
+
+    # odom_frame_id: x                           # nome del frame di odometria, opzionale
+    # pose_covariance_diagonal: x                # matrice covarianza posizione, opzionale
+    # twist_covariance_diagonal: x               # matrice covarianza velocità, opzionale
+    # enable_odom_tf: x                          # se true pubblica odom->base_link TF, opzionale
+
+    # cmd_vel_timeout: x                          # timeout comandi velocità, opzionale
+    # publish_limited_velocity: x                 # se true pubblica velocità limitata, opzionale
+    # velocity_rolling_window_size: x             # finestra per medie di velocità, opzionale
+
+    # linear.x.has_velocity_limits: false        # limiti velocità lineare, opzionale
+    # linear.x.has_acceleration_limits: false    # limiti accelerazione lineare, opzionale
+    # linear.x.has_jerk_limits: false            # limiti jerk lineare, opzionale
+    # linear.x.max_velocity: NAN                  # massimo velocità lineare, opzionale
+    # linear.x.min_velocity: NAN                  # minimo velocità lineare, opzionale
+    # linear.x.max_acceleration: NAN              # massimo accelerazione lineare, opzionale
+    # linear.x.min_acceleration: NAN              # minimo accelerazione lineare, opzionale
+    # linear.x.max_jerk: NAN                      # massimo jerk lineare, opzionale
+    # linear.x.min_jerk: NAN                      # minimo jerk lineare, opzionale
+
+    # angular.z.has_velocity_limits: false       # limiti velocità angolare, opzionale
+    # angular.z.has_acceleration_limits: false   # limiti accelerazione angolare, opzionale
+    # angular.z.has_jerk_limits: false           # limiti jerk angolare, opzionale
+    # angular.z.max_velocity: NAN                 # massimo velocità angolare, opzionale
+    # angular.z.min_velocity: NAN                 # minimo velocità angolare, opzionale
+    # angular.z.max_acceleration: NAN             # massimo accelerazione angolare, opzionale
+    # angular.z.min_acceleration: NAN             # minimo accelerazione angolare, opzionale
+    # angular.z.max_jerk: NAN                     # massimo jerk angolare, opzionale
+    # angular.z.min_jerk: NAN                     # minimo jerk angolare, opzionale
+
+
+
+
