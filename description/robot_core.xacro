@@ -75,7 +75,8 @@
         </visual>
         <collision> <!-- physic collision -->
             <geometry>
-                <cylinder radius="0.05" length="0.04"/> <!-- same as visual-->
+                <sphere radius = "0.05"/>
+                <!-- <cylinder radius="0.05" length="0.04"/>  same as visual-->
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05"> <!-- inertial properties-->
@@ -104,7 +105,8 @@
         </visual>
         <collision> <!-- physic collision -->
             <geometry>
-                <cylinder radius="0.05" length="0.04"/> <!-- same as visual-->
+                <sphere radius = "0.05"/>
+                <!-- <cylinder radius="0.05" length="0.04"/>  same as visual-->
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05"> <!-- inertial properties-->
